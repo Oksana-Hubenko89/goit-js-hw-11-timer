@@ -13,7 +13,7 @@ export default class CountdownTimer {
       secs: document.querySelector(`${selector} [data-value="secs"]`),
       timerFase: document.querySelector('.timer'),
     };
-     
+     this.start();
   }
 
   start() {
@@ -45,6 +45,7 @@ export default class CountdownTimer {
   pad(value) {
     return String(value).padStart(2, '0');
   }
+  
 }
 
 
@@ -54,11 +55,11 @@ const timer = new CountdownTimer({
   targetDate: new Date('Dec 31, 2020'),  
 });
 
-timer.start();
+
 
  const timer_e = new CountdownTimer({
     selector: '#timer-2', 
    targetDate: new Date('Feb 17, 2021'),
  });
- timer_e.start();
+ 
 
